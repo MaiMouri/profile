@@ -24,9 +24,29 @@ h3 {
 }
 
 .container {
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
 }
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
 .card-white {
   background-color: white;
   /*width: 500px;*/
@@ -52,6 +72,68 @@ h3 {
   transition: 0.5s;
 }
 
+.container-flex{
+  display: flex;
+}
+
+.picture {
+  width: calc(100%/ 2 - 20px);
+  margin: 10px;
+  padding: 10px;
+}
+
+.picture img {
+  width: 100%;
+  padding: 5px;
+  box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+}
+
+.trip {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  /* display:grid;
+  grid-template: repeat(auto-fill, 200px); */
+  /* grid-gap: 1rem;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-rows: 150px 100px 50px 50px auto; */
+}
+
+.trip li {
+  /* display: inline; */
+  float: left;
+  padding: 5px;
+  width: 30%;
+}
+.img-fit {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .trip {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+  }
+  .trip li {
+    display: inline;
+    padding: 5px;
+    width: 46%;
+}
+
+@media (max-width: 540px) {
+  .trip {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+  }
+  .trip li {
+    display: inline;
+    padding: 5px;
+    width: 100%;
+  }
+}
 
 .list-inline {
   padding: 0;
