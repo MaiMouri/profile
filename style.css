@@ -89,25 +89,51 @@ h3 {
 }
 
 .trip {
+  display: inline-grid;
   width: 100%;
   padding: 0;
   list-style: none;
-  overflow: hidden;
-  /* display:grid;
-  grid-template: repeat(auto-fill, 200px); */
-  /* grid-gap: 1rem;
-  grid-template-columns: 2fr 1fr 1.5fr;
-  grid-template-rows: 150px 100px 50px 50px auto; */
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  height: auto;
 }
 
 .trip li {
-  /* display: inline; */
-  float: left;
   padding: 5px;
-  width: 30%;
 }
 .img-fit {
   width: 100%;
+  height: 100%;
+  grid-column: 1/3;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.la_1 {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+.la_2 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.la_3 {
+  grid-row: 3/5;
+  grid-column: 1/2;
+}
+.la_4 {
+  grid-row: 3/4;
+  grid-column: 2/4;
+  height: 180px;
+}
+.la_5 {
+  grid-row: 4/5;
+  grid-column: 2/4;
+  height: 180px;
+}
+.la_6 {
+  grid-row: 5/6;
+  grid-column: 1/3;
+  height: 180px;
 }
 
 @media (max-width: 720px) {
